@@ -1,0 +1,68 @@
+.carousel {
+    margin: 20px;
+}
+
+.carousel-view {
+    /* (width of each item * number of items) + total width of prev & next button */
+    /* width: calc((300px*4));  */
+    height: 200px;
+    background: white;
+    box-shadow: 0 1px 8px #888888;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.carousel-control {
+    position:absolute;
+    z-index: 1;
+    height: 100%;
+    width:3%;
+    background-color: #111;
+    opacity: 0.1;
+    transition: background-color 0.3s;
+    display: table;
+    cursor: pointer;
+}
+
+.carousel-control .icon {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.carousel-control:hover{
+    opacity: 1;
+}
+
+.carousel-control:first-of-type {
+    left: 0;
+}
+
+.carousel-control:last-of-type {
+    right: 0;
+}
+
+.product-list {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s;
+    transform: translate(0px);
+    list-style: none;
+    height: 100%;
+}
+
+.product-list-item {
+    height: 100%;
+    display: inline-block;
+}
+
+.product {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
