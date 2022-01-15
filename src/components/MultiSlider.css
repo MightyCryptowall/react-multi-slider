@@ -66,3 +66,52 @@
     height: 100%;
     width: 100%;
 }
+
+ /* Hove Effect */
+
+ .thumbnail{
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .thumbnail-text{
+    position: absolute;
+    top:35%;
+    left:10%;
+    width: 80%;
+    
+    /* padding: 0em 1em; */
+    line-height: 0.1rem;
+    color: #fff;
+    opacity: 0;
+  }
+
+  .thumbnail-text h5{
+      font-size: 1rem;
+  }
+  
+  .thumbnail-overlay{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    /* padding: 0em 1em; */
+  }
+  
+  .thumbnail:hover{
+    background-color: #B71C1C;
+    transition: 1s ease;
+  }
+  
+  
+  .thumbnail:hover .thumbnail-text{
+    opacity: 0;
+    margin-top: 0.3em;
+    animation: showText 0.5s ease;
+    animation-fill-mode: forwards; 
+  }
+  
+  @keyframes showText {
+    form {margin-top: 0.1rem; opacity: 0%;}
+    to {margin-top: 0em; opacity: 100%;}
+  }
